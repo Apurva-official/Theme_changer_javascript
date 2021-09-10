@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 0px 1px 1px rgb(87, 87, 87);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+    padding: 0px 3px;
+}
+
+.header {
+    grid-area: myheader;
+    background-color: rgba(30, 30, 31, 0.986);
+    color: white;
+    padding-top: 5px;
+}
+
+.menu,
+.sidebar,
+.main {
+    padding-top: 3vh;
+}
+
+.menu {
+    grid-area: mymenu;
+    background-color: rgba(197, 197, 197, 0.986);
+}
+
+.sidebar {
+    grid-area: mysidebar;
+    background-color: rgba(212, 211, 211, 0.986);
+}
+
+.main {
+    grid-area: mymain;
+    background-color: rgba(231, 231, 231, 0.986);
+}
+
+.footer {
+    grid-area: myfooter;
+    padding: 2vh;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.btn-change {
+    display: block;
+    width: 30%;
+    margin: 35vh auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 2.5fr 2.5fr;
+    grid-template-rows: 40px 80vh 5vh;
+    grid-template-areas: "myheader myheader myheader myheader" "mymenu mysidebar mymain mymain" "mymenu mysidebar mymain mymain" "mymenu mysidebar mymain mymain" "myfooter myfooter myfooter myfooter";
+}
+
+@media (min-width: 100px) and (max-width: 500px) {
+    * {
+        width: 100vw;
+    }
+    .grid-container {
+        display: block;
+    }
+    .main {
+        height: 80vh;
+    }
+    .header,
+    .menu,
+    .sidebar {
+        height: 15vh;
+        padding-top: 8vh;
+    }
+}
